@@ -1,7 +1,7 @@
 "Bazel dependencies"
 
 module(
-    name = "trhodeos_rules_julia",
+    name = "com_google_trhodeos_rules_julia",
     version = "0.0.0",
     compatibility_level = 1,
 )

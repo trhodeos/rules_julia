@@ -38,10 +38,10 @@ PLATFORMS = {
             "@platforms//cpu:x86_64",
         ],
     ),
-    "x86_64-pc-windows-msvc": struct(
+    "aarch64-unknown-linux-gnu": struct(
         compatible_with = [
-            "@platforms//os:windows",
-            "@platforms//cpu:x86_64",
+            "@platforms//os:linux",
+            "@platforms//cpu:aarch64",
         ],
     ),
 }
@@ -63,7 +63,7 @@ toolchain(
     name = "{platform}_toolchain",
     exec_compatible_with = {compatible_with},
     toolchain = "@{user_repository_name}_{platform}//:julia_toolchain",
-    toolchain_type = "@trhodeos_rules_julia//julia:toolchain_type",
+    toolchain_type = "@com_google_trhodeos_rules_julia//julia:toolchain_type",
 )
 """.format(
             platform = platform,

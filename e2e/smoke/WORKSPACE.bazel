@@ -1,6 +1,6 @@
 # Override http_archive for local testing
 local_repository(
-    name = "trhodeos_rules_julia",
+    name = "com_google_trhodeos_rules_julia",
     path = "../..",
 )
 
@@ -14,6 +14,11 @@ local_repository(
 # you should fetch it *before* calling this.
 # Alternatively, you can skip calling this function, so long as you've
 # already fetched all the dependencies.
-load("@trhodeos_rules_julia//julia:repositories.bzl", "rules_julia_dependencies")
+load("@com_google_trhodeos_rules_julia//julia:repositories.bzl", "julia_repositories", "rules_julia_dependencies")
 
 rules_julia_dependencies()
+
+julia_repositories(
+    name = "julia",
+    julia_version = "1.9.2",
+)
