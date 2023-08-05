@@ -44,6 +44,12 @@ PLATFORMS = {
             "@platforms//cpu:aarch64",
         ],
     ),
+    "x86_64-pc-windows-msvc": struct(
+        compatible_with = [
+            "@platforms//os:windows",
+            "@platforms//cpu:x86_64",
+        ],
+    ),
 }
 
 def _toolchains_repo_impl(repository_ctx):

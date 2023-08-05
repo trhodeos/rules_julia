@@ -20,5 +20,9 @@ TOOL_VERSIONS = {
             "url": "https://julialang-s3.julialang.org/bin/linux/x64/1.9/julia-1.9.2-linux-x86_64.tar.gz",
             "sha": "sha384-oMlLVNKtR831tTubbjdYD5W7BX080xM3fzcEil44wLuEdpEq+K7Fhd9LXoP2vGnX",
         },
+        "x86_64-pc-windows-msvc": {
+            "url": "https://julialang-s3.julialang.org/bin/winnt/x64/1.9/julia-1.9.2-win64.zip",
+            "sha": "vCwepltxhl/syNrjaL9ZGSCoV2X6mj2dXy4eLtv+f0WEq+Sszd14S4UB74mE1kDR",
+        },
     },
 }
