@@ -69,7 +69,7 @@ def julia_register_toolchains(name, register = True, **kwargs):
     """Convenience macro for users which does typical setup.
 
     - create a repository for each built-in platform like "julia_linux_amd64" -
-      this repository is lazily fetched when node is needed for that platform.
+      this repository is lazily fetched when julia is needed for that platform.
     - TODO: create a convenience repository for the host platform like "julia_host"
     - create a repository exposing toolchains for each platform like "julia_platforms"
     - register a toolchain pointing at each platform
@@ -78,7 +78,7 @@ def julia_register_toolchains(name, register = True, **kwargs):
         name: base name for all created repos, like "julia1_14"
         register: whether to call through to native.register_toolchains.
             Should be True for WORKSPACE users, but false when used under bzlmod extension
-        **kwargs: passed to each node_repositories call
+        **kwargs: passed to each julia_repositories call
     """
     for platform in PLATFORMS.keys():
         julia_repositories(
