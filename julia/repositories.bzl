@@ -36,6 +36,7 @@ def rules_julia_dependencies():
 _DOC = "Fetch external tools needed for julia toolchain"
 _ATTRS = {
     "julia_version": attr.string(mandatory = True, values = TOOL_VERSIONS.keys()),
+    "platform": attr.string(mandatory = True, values = PLATFORMS.keys()),
 }
 
 def _julia_repo_impl(repository_ctx):
